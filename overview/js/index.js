@@ -3,8 +3,8 @@
 
 
 // console
-console.log('Texto dentro de um log.')
-console.warn('Isso é um alerta.')
+console.log('Texto dentro de um log.') //console. é um objeto que é nativo e é o caminho pra chegar no dado ou no caminho que quero chegar
+console.warn('Isso é um alerta.') 
 console.error('Essa é uma mensagem de erro.')
 // console é um objeto e log(), warn() e error() são métodos ou funções
 
@@ -12,12 +12,14 @@ console.error('Essa é uma mensagem de erro.')
 
 // variáveis
 
-// escopo global
+// escopo global - bloco mais externo
 let x = 10
 if(true){
     // escopo local
+    //usar let sempre que precisa usar escopo
+    //const não possui a mesma facilidade ele não pode ser alterado.
     let x = 20
-    console.log(x)
+    console.log(this.x) //this. te leva para referenciar fora do escopo local
 }
 // é incorreto utilizar var depois do EC6
 
@@ -26,7 +28,7 @@ if(true){
 // tipos de dados
 
 // string
-const name = 'Victor'
+const name = 'Ana'
 console.log(name)
 console.log(typeof name)
 
@@ -71,7 +73,7 @@ const user = {
 console.log(user)
 console.log(typeof user)
 
-
+//--------------------------------Fim aula 19/06/2023------------------------------
 
 // métodos de string
 
