@@ -95,7 +95,7 @@ console.log(text.slice(2,10))
 
 
 // mais sobre arrays
-// podem ser heterogêneos, ou seja, ter dados de tipos diferentes
+// podem ser heterogêneos, ou seja, ter dados de tipos diferentes, um vetor pode ter outro vetor
 const chars = ['A', 'B', 'C', 'D', 88]
 // length em um array retorna quantos dados estão lá dentro
 console.log(chars.length)
@@ -114,6 +114,33 @@ console.log(chars)
 
 // Desafio: desenvolva uma calculadora para as 4 operações básicas usando const com os dados vindo de um formulário.
 
+function calcular() {
+    const num1 = parseInt(document.querySelector("#input1").value);
+    const num2 = parseInt(document.querySelector("input2").value);
+    const operacao = document.querySelector("#operacao").value;
+    let resultado;
+
+    if (operacao === "+") {
+      resultado = num1 + num2;
+    } else if (operacao === "-") {
+      resultado = num1 - num2;
+    } else if (operacao === "*") {
+      resultado = num1 * num2;
+    } else if (operacao === "/") {
+      resultado = num1 / num2;
+    }
+
+    //document.querySelector("#resultado").innerHTML = "Resultado: " + resultado;
+    console.log(resultado)
+  }
+
+function calculator(){
+    const formData = new FormData(document.querySelector('form'))
+    const n1 = parseInt(formData.get('n1'))
+    const n2 = parseInt(formData.get('n2'))
+
+    console.log(n1+n2)
+}
 
 
 
@@ -173,10 +200,42 @@ console.log(dogObject)
 //const jsonErrado = '{"primeiro":"dado1""segundo":222,"terceiro":"dado3}'
 //const jsonErradoObject = JSON.parse(jsonErrado)
 
-// Desafio 1: Armazene 5 dados numéricos em um vetor. Em seguida, copie para um objeto com as propriedades n1, n2, n3, n4 e n5. Utilize destructuring para copiar os valores para 5 variáveis. Construa um objeto JSON com os valores das variáveis.
+// Desafio 1: Armazene 5 dados numéricos em um vetor. Em seguida, copie para um objeto com as 
+//propriedades n1, n2, n3, n4 e n5. Utilize destructuring para copiar os valores para 5 variáveis. 
+//Construa um objeto JSON com os valores das variáveis.
 
-// Desafio 2: Desenvolva uma calculadora que armazene em um objeto JSON o resultado das 4 operações básicas. Em outras palavras: crie um objeto calculadora, inicialize cada uma das operações da calculadora (que serão propriedades do objeto) com o resultado do processamento matemático vindo de duas variáveis e converta para um objeto JSON.
+// Armazena os dados numéricos em um vetor
+const vetor = [1, 2, 3, 4, 5];
 
+// Copia os valores do vetor para um objeto usando destructuring
+let { 0: n1, 1: n2, 2: n3, 3: n4, 4: n5 } = vetor;
+
+// Cria um objeto JSON com os valores das variáveis
+const objetoJSON = JSON.stringify({ n1, n2, n3, n4, n5 });
+
+console.log(objetoJSON);
+
+// Desafio 2: Desenvolva uma calculadora que armazene em um objeto JSON o resultado das 4 operações 
+//básicas. Em outras palavras: crie um objeto calculadora, inicialize cada uma das operações da 
+//calculadora (que serão propriedades do objeto) com o resultado do processamento matemático vindo de 
+//duas variáveis e converta para um objeto JSON.
+
+// Variáveis contendo os valores para as operações
+const num1 = 10;
+const num2 = 5;
+
+// Criação do objeto calculadora e execução das operações
+const calculadora = {
+  adicao: num1 + num2,
+  subtracao: num1 - num2,
+  multiplicacao: num1 * num2,
+  divisao: num1 / num2
+};
+
+// Conversão do objeto para JSON
+const objetooJSON = JSON.stringify(calculadora);
+
+console.log(objetooJSON);
 
 
 // estruturas
@@ -286,6 +345,13 @@ function out(){
     return sumXand5()
 }
 */
+
+// const out = () => {
+//     let x = 7;
+//     const sumXand5 = () => x + 5;
+//     return sumXand5();
+// };
+  
 
 const testArrow = () => ((x=7), ()=>(x+5))  ()
 console.log(testArrow())
