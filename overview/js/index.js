@@ -236,7 +236,7 @@ const calculadora = {
 const objetooJSON = JSON.stringify(calculadora);
 
 console.log(objetooJSON);
-
+//------------------------------------------Fim da aula 20/06/2023--------------------------------------------------------
 
 // estruturas
 
@@ -269,13 +269,14 @@ while(contador < lista.length){
 
 const outraLista = ['a', 'b', 'd', 'e', 'c']
 for(let contador = 0; contador < outraLista.length; contador++)
-    console.log(`O elemento da
-vez é ${outraLista[contador]}.`) //template literais, ou template strings: conteúdo entre crases; a quebra de linha no editor de cógidos gera quebra de linha no navegador.
+    console.log(`O elemento da vez é ${outraLista[contador]}.`) //template literais, ou template strings: conteúdo entre crases; a quebra de linha no editor de cógidos gera quebra de linha no navegador.
+
+
+// Desafio relâmpago: escreva o que aparece no log abaixo como template literals.
 
 const var1 = 5
 const var2 = 10
-const outLiteral = `Quinze é ${(var1+var2)}
-e não ${(2*var1+var2)}.`
+const outLiteral = `Quinze é ${(var1+var2)} e não ${(2*var1+var2)}.`
 console.log(outLiteral)
 
 
@@ -367,18 +368,23 @@ console.log(namesLength)
 let varX = 50
 function out(){
     let varX = 35
-    function sumXand5(){
+    function somando(){
         let varX = 10
         return varX+5
     }
-     return sumXand5()
+     return somando()
 }
 console.log(out())
 
-// Desafio A+: Fazer esquema em que um código declara uma variável (let) e uma função faz a soma do valor da variável com um valor estático (5, por exemplo) como retorno. Outro código importa o primeiro e declara uma variável com o mesmo nome e outro valor. Em seguida, chama a função do primeiro código. Qual valor será exibido?
+// Desafio A+: Fazer esquema em que um código declara uma variável (let) e uma função faz a soma do valor da 
+//variável com um valor estático (5, por exemplo) como retorno. Outro código importa o primeiro e declara uma 
+//variável com o mesmo nome e outro valor. Em seguida, chama a função do primeiro código. Qual valor será exibido?
 // Utilizar o artigo disponível no endereço https://www.horadecodar.com.br/2020/08/13/como-incluir-um-arquivo-de-javascript-em-outro/
 
 
+
+
+//------------------------------------------------ Fim da aula 22/06/2023 ----------------------------------------------------
 
 // orientação a objetos
 
