@@ -157,7 +157,8 @@ const product = {
 
 console.log(product.size[product.size.length-1])
 console.log(product.price)
-// a propriedade 'main color' não pode ser chamada via sintaxe de orientação a objetos; precisa ser utilizada a sintaxe de vetor em virtude do nome composto como propriedade do objeto product
+// a propriedade 'main color' não pode ser chamada via sintaxe de orientação a objetos; precisa ser utilizada a sintaxe 
+//de vetor em virtude do nome composto como propriedade do objeto product
 console.log(product['main color'])
 
 // destructuring - desestruturação
@@ -258,7 +259,8 @@ const resultado =  n > 20 ? true : false
 console.log(resultado)
 console.log(typeof resultado)
 
-// repetição: precisa de 3 partes - variável de controle e a inicialização dela; condição/critério de parada; alteração do valor da variável de controle
+// repetição: precisa de 3 partes - variável de controle e a inicialização dela; condição/critério de parada; 
+//alteração do valor da variável de controle
 
 let contador = 0
 const lista = [1, 7, 3, 64, 2, 0]
@@ -269,7 +271,9 @@ while(contador < lista.length){
 
 const outraLista = ['a', 'b', 'd', 'e', 'c']
 for(let contador = 0; contador < outraLista.length; contador++)
-    console.log(`O elemento da vez é ${outraLista[contador]}.`) //template literais, ou template strings: conteúdo entre crases; a quebra de linha no editor de cógidos gera quebra de linha no navegador.
+    console.log(`O elemento da vez é ${outraLista[contador]}.`) //template literais, ou template strings: conteúdo entre 
+                                                                //crases; a quebra de linha no editor de cógidos gera quebra 
+                                                                //de linha no navegador.
 
 
 // Desafio relâmpago: escreva o que aparece no log abaixo como template literals.
@@ -331,7 +335,8 @@ console.log(myFunction('Paulo', 'Sampaio'))
 // arrow function === função anônima
 // function(data){ return 0; } é uma função anônima, ou seja, uma função que não possui nome na sua assinatura
 
-// arrow functions geralmente são atribuídas a variáveis que passam a ser funções ou são parte dos parâmetros ou argumentos de uma chamada de função.
+// arrow functions geralmente são atribuídas a variáveis que passam a ser funções ou são parte dos parâmetros ou 
+//argumentos de uma chamada de função.
 const myArrowFunction = (a,b) => a+b
 console.log(myArrowFunction(5,2))
 
@@ -357,14 +362,17 @@ function out(){
 const testArrow = () => ((x=7), ()=>(x+5))  ()
 console.log(testArrow())
 
-// reduzindo o formato de escrita; quando tempos apenas uma propriedade de um objeto sendo utilizada na função anônima, podemos escrever o parâmetro como object literal especificando a propriedade do objeto que será trabalhada e utilizá-la sem que seja necessário escrever o nome do objeto
+// reduzindo o formato de escrita; quando tempos apenas uma propriedade de um objeto sendo utilizada na função anônima, 
+//podemos escrever o parâmetro como object literal especificando a propriedade do objeto que será trabalhada e utilizá-la
+// sem que seja necessário escrever o nome do objeto
 const namesLength = names.map( ({length}) => length )
 console.log(namesLength)
 
 
 // closures
 // significa fechamento
-// trata-se de mais um escopo possível, considerando que uma função conheçe o escopo de onde foi declarada e pode usar as variáveis contidas nele, não sendo, nesse caso, nem escopo global, nem escopo local
+// trata-se de mais um escopo possível, considerando que uma função conheçe o escopo de onde foi declarada e pode usar as 
+//variáveis contidas nele, não sendo, nesse caso, nem escopo global, nem escopo local
 let varX = 50
 function out(){
     let varX = 35
@@ -393,13 +401,16 @@ class Product{
     // em JavaScript, os atributos costumam ser especificados via contrutor
     // o método constructor será chamado toda vez que um objeto de Product for criado (instanciado)
     constructor(name, price){
-        // a palavra reservada this indica que o dado que está sendo referenciado está fora do escopo atual, ou seja, this é um apontamento para quem está na classe Product, nesse caso
-        // mesmo que não tenha sido explicitamente definido no código, name e price são atributos (propriedades) da classe Product, pois estão sendo trabalhados dentro do método especial constructor
+        // a palavra reservada this indica que o dado que está sendo referenciado está fora do escopo atual, 
+        //ou seja, this é um apontamento para quem está na classe Product, nesse caso
+        // mesmo que não tenha sido explicitamente definido no código, name e price são atributos (propriedades) 
+        //da classe Product, pois estão sendo trabalhados dentro do método especial constructor
         this.name = name
         this.price = price            
     }
     // método sem parâmetro e com retorno
-    // utilizar retorno é mais interessante, pois torna os métodos mais úteis para diferentes cenários (armazenar no banco, exibir na tela, atribuir para uma variável...)
+    // utilizar retorno é mais interessante, pois torna os métodos mais úteis para diferentes cenários (armazenar no banco,
+    // exibir na tela, atribuir para uma variável...)
     productDetails(){
         return `O nome do produto é ${this.name} e o preco é ${this.price}.`
     }
@@ -408,6 +419,8 @@ class Product{
         console.log('testando método estático...')
     }
 }
+Product.test() // faz a chama do método acima
+
 
 // herança
 
@@ -445,12 +458,12 @@ tenis.name = 'tenis Jordan'
 // cria uma árvore que representa a estrutura do documento HTML, indicando qual elemento está dentro de qual outro elemento
 // através do objeto nativo document, é possível executar métodos que permitem obter e manipular o HTML
 
-// seleciona elemento pelo id; pouco recomendado fazer dessa forma
+// seleciona elemento pelo id pouco recomendado fazer dessa forma
 console.log(document.getElementById('titulo'))
 
 // seleciona vários elementos pelo nome da classe e cria um array
 const texts = document.querySelectorAll('.text')
-console.log(texts)
+console.log(typeof(texts))
 
 texts.forEach((data) => console.log(data))
 
@@ -470,7 +483,7 @@ texts[2].remove()
 // seleciona um elemento pelo id, armazenando em uma variável
 const button = document.querySelector('#btn')
 // rotina para a execução de alteração no estilo de um elemento a partir do clique
-button.addEventListener('click',()=>(texts[3].style.backgroundColor='orange'))
+button.addEventListener('click',()=>(texts[0].style.backgroundColor='purple'))
 
 // callbacks
 
