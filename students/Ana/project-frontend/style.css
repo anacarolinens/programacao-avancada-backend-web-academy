@@ -1,0 +1,144 @@
+/*Mobile*/
+@media only screen and (max-width: 479px){
+    body {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #F9B7D8;
+
+    }
+
+
+    img {
+        width: 70px;
+        height: auto;
+        margin-top: 20px;
+        
+    }
+
+    li {
+      list-style-type: none;
+    }
+    ul {
+      margin: 0%;
+      padding: 0%;
+    }
+        
+    /*Nav menu*/
+    .menu {
+      position: absolute;
+      top: 0;
+      left: 20px; 
+      width: 100%;
+
+      transform: translateX(-100%);
+    }
+
+    .menu-open {
+      transform: translateX(0);
+    }
+
+    .menu-item {
+      border-bottom: 1px solid #F56ACE;
+      padding: 20px 15px;
+
+    }
+
+    .menu-item-action {
+      color: #F56ACE;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    /* .wrap-menu{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    } */
+
+    .btnMenu {
+      display: block;
+      background-repeat: no-repeat;
+      background-position: 15px center;
+      text-indent: -9999px;
+      padding: 20px 15px;  
+ 
+    }
+
+    .btnMenu-open {
+      background-image: url(/project-frontend/img/burger-menu.svg);
+      transform: ;
+    }
+
+    .btnMenu-close{
+      background-color: #F56ACE;
+      background-image: url(/project-frontend/img/burger-menu-claro.svg);
+    }
+
+
+
+
+
+
+    /* .input-form {
+        position: absolute;
+        width: 100%;
+        height: 6.5rem;
+    }
+
+
+    .div-section-1 {
+        width: 100%;
+        height: 6.5rem;
+        grid-row: 4 / span 1;
+    }
+    .div-section-2 {
+        width: 100%;
+        height: 6.5rem;
+        grid-row: 5 / span 1;
+    }
+    .div-section-3 {
+        width: 100%;
+        height: 6.5rem;
+        }
+    .paragrafo {
+        width: 100%;
+        height: 6.5rem;
+        } */
+
+    #footer{
+        background-color: black;
+        
+        width: 100%;
+        height: 6.5rem;
+        color: aliceblue;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+
+
+/*Tablet*/
+@media only screen and ( min-width: 480px) and (max-width: 767px) {
+
+
+}
+
+
+
+
+
+
+/*desktop*/
+@media only screen and ( min-width: 768px ) {
+
+
+}
